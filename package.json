@@ -1,7 +1,7 @@
 {
-  "name": "onlinegame",
+  "name": "OzoxPragma",
   "version": "1.0.0",
-  "description": "Hoslaf is a realtime chat application using Node.js, Socket.io and MongoDB",
+  "description": "Ozox-Chat is a realtime chat application using Node.js, Socket.io and MongoDB",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
