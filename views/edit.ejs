@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <title>Hesap Düzenle</title>
+ <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kullanıcılar</h2>
+        <table border="1">
+            <tr>
+                <th>E-Mail</th>
+                <th>User Level</th>
+            </tr>
+        <% userList.forEach(user => { %>
+            <tr>
+                <td><%= user.email %></td>
+                <td><%= user.userlevel %></td>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+    <div class="form-container">
+        <h2>Hesap Düzenle</h2>
+        <form action="/edit" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" name="password" id="password" placeholder="Şifrenizi Girin..." required>
+            </div>
+            <div class="form-group" >
+                <label for="userLevel">Kullanıcı Seviyesi</label>
+                <input type="list" list="userLevels" name="userLevel" id="userLevel" placeholder="Kullanıcı seviyesi" required>
+                <datalist id="userLevels">
+                    <option value="Admin">
+                    <option value="User">
+                    <option value="Editor">
+                </datalist>
+            </div>
+            <div class="form-group-1">
+                <input type="checkbox" name="_2fa" id="_2fa" value="false" >
+                <label for="_2fa">2 adımlı doğrulama</label>
+            </div>
+            <button type="submit" class="submit-btn">Düzenle</button>
+            <a class="central" href="/admin">Geri Git</a>
+        </form>
+    </div>
+</body>
+<script>
+$("#_2fa").on('change', function() {
+  if ($(this).is(':checked')) {
+    $(this).attr('value', 'true');
+  } else {
+    $(this).attr('value', 'false');
+  }
+});
+</script>
+</html>

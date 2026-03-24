@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.form-container {
+	flex-wrap: wrap;
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.form-group {
+	flex-basis: 200;
+	margin-bottom: 15px;
+}
+.form-group label{
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.form-group-1 label{
+	font-weight: bold;
+	margin-left: 10px;
+}
+.form-group-1{
+	flex-grow: 1;
+	flex-basis: 200;
+	display: flex;
+	padding: 10px;
+    justify-content: center;
+}
+.form-group input{
+	width: 100%;
+	padding: 8px;
+	font-size: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.submit-btn {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #472dbb;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.submit-btn:hover {
+	background-color: #4565a0;
+}
+.central {
+	display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Dikeyde tam ortalar */
+    gap: 8px;            /* Aralarındaki boşluk */
+}
+.checkbox-container label {
+	font-weight: bold;
+	margin-bottom: 5px;
+  	transform: translateY(-50%);
+  	cursor: pointer;
+  	user-select: none;
+}
+/* Checkbox'ın kendisini gizliyoruz */
+#toggleCheck {
+  display: none;
+}
+
+/* Checkbox seçili olduğunda ikonu değiştirme (isteğe bağlı) */
+#toggleCheck:checked + .icon::before {
+  content: "👁️"; /* Gizli hali */
+}
+#toggleCheck:not(:checked) + .icon::before {
+  content: "🙈"; /* Açık hali */
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+.password-container {
+  position: relative;
+  width: 300px;
+}
+.input-container {
+	position: relative;
+	width: 100%;
+	margin-bottom: 50px;
+}
+.input-container input{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #aaa;
+	font-size: 14px;
+	outline: none;
+}
+.input-container label{
+	position: absolute;
+	top: 2px;
+	left: 0;
+	color: #aaa;
+	transition: 0.3s;
+	pointer-events: none;
+}
+.input-container input:focus+label, 
+.input-container input:valid+label {
+	top: -14px;
+	color: #000;
+	font-size: 12px;
+}
+.input-container .underline{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #000;
+	transform: scaleX(0);
+	transition: 0.3s;
+}
+.input-container input:focus~.underline,
+.input-container input:valid~.underline {
+	transform: scaleX(1);
+}
