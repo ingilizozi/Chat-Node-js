@@ -1,16 +1,3 @@
-//process.env.TZ = 'Europe/Nicosia';
-//console.log('Current Time Zone:', process.env.TZ);
-/*const { NtpTimeSync } = require('ntp-time-sync');
-
-// Artık NtpTimeSync bir constructor'dır:
-const ntp = new NtpTimeSync(); 
-
-async function zamanıAl() {
-    const zaman = await ntp.getTime();
-    console.log('NTP Zamanı:', zaman);
-}
-zamanıAl();
-*/
 const mongoose = require("mongoose");
 const router = require('express').Router();
 const express = require('express');
