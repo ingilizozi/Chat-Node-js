@@ -39,12 +39,14 @@ node -v
 npm -v
 
 Artık node js linux sistemine kurulu, şimdi projemizin kurulumunu yapalım.
-  Öncelikle sisteminize git yüklü değilse yükleyelim:
+
+Öncelikle sisteminize git yüklü değilse yükleyelim:
 sudo apt update
 sudo apt install git
-  Sonra aşağıdaki kodu projemizi kaydetmek istediğimiz klasöre gidip Bash ekranımıza girelim:
+
+Sonra aşağıdaki kodu projemizi kaydetmek istediğimiz klasöre gidip Bash ekranımıza girelim:
 git clone https://github.com/ingilizozi/Chat-Node-js
-  Bunun ardından projemiz için gerekli kütüphaneleri yükleyelim:
+Bunun ardından projemiz için gerekli kütüphaneleri yükleyelim:
 npm install
 
 Ve sertifikamızı ayarladıktan sonra projemizi çalıştıralım.
