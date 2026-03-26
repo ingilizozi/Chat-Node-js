@@ -13,6 +13,10 @@ const server = http.createServer({
      key: fs.readFileSync('cert/privkey.pem'),
      cert: fs.readFileSync('cert/fullchain.pem')
 },app);
+/*
+GÜVENLİOLMAYAN BAĞLANTI - UNSECURE (Denenmedi)
+const server = http.createServer({}, app);
+*/
 const { Server } = require("socket.io");
 const io = new Server(server);
 require('dotenv').config()
