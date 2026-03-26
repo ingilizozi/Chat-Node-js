@@ -5,6 +5,9 @@ Projemiz localhost'da 3000 portunda çalışacakır.
   Port için gerekli izinleri verelim:
 sudo ufw allow 3000
 
+  Proje https (Secure) olarak yapıldı ama yerelde çalıştırıp deneme yapacak olanlar http olarakta çalıştırabilir.
+Eğer https çalıştırılacaksa [cert/cert files...] klasörünü yaratıp içine SSL sertifika cer ve key uzantılı dosyaları koymak zorundadır.
+
 a) Zor yol:
 1- NVM'yi kurun:
 BASH Ekranı=
